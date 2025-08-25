@@ -64,8 +64,7 @@ class Data:
             "peek": lambda: pila[-1] if pila else None,
             "is_empty": lambda: len(pila) == 0
         }
-
-    
+        
     def implementar_cola(self):
         cola = []
         return {
@@ -76,9 +75,10 @@ class Data:
         }
 
     def matriz_transpuesta(self, matriz):
-    if not matriz or not matriz[0]:
-    return []
-    filas = len(matriz)
-    columnas = len(matriz[0])
+        if not matriz or not matriz[0]:
+            return []
+        filas = len(matriz)
+        columnas = len(matriz[0])
         return [[matriz[j][i] for j in range(filas)] for i in range(columnas)]
-    Data.matriz_transpuesta = matriz_transpuesta
+
+Data.matriz_transpuesta = Data.matriz_transpuesta
