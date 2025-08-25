@@ -5,10 +5,10 @@ class Data:
     """
     
     def invertir_lista(self, lista):
-        resultado = []
+        resul = []
         for i in range(len(lista) - 1, -1, -1):
-            resultado.append(lista[i])
-        return resultado
+            resul.append(lista[i])
+        return resul
     
     def buscar_elemento(self, lista, elemento):
         for i in range(len(lista)):
@@ -64,7 +64,7 @@ class Data:
             "peek": lambda: pila[-1] if pila else None,
             "is_empty": lambda: len(pila) == 0
         }
-        
+    
     def implementar_cola(self):
         cola = []
         return {
@@ -73,12 +73,11 @@ class Data:
             "peek": lambda: cola[0] if cola else None,
             "is_empty": lambda: len(cola) == 0
         }
-
+    
     def matriz_transpuesta(self, matriz):
         if not matriz or not matriz[0]:
             return []
         filas = len(matriz)
         columnas = len(matriz[0])
         return [[matriz[j][i] for j in range(filas)] for i in range(columnas)]
-
-Data.matriz_transpuesta = Data.matriz_transpuesta
+        
