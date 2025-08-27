@@ -4,7 +4,7 @@ class Logica:
     """
     
     def AND(self, a, b):
-         return a and b
+        return a and b
     
     def OR(self, a, b):
         return a or b
@@ -25,9 +25,9 @@ class Logica:
         return a == b
     
     def implicacion(self, a, b):
-   return not a or b
-   
+        return not a or b
+    
     def bi_implicacion(self, a, b):
-     return a == b
+        return a == b
     
     
