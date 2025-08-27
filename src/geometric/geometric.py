@@ -105,15 +105,14 @@ class Geometria:
         return (A, B, C)
     
     def area_poligono_regular(self, num_lados, lado, apotema):
-        if num_lados == 3:
-            area = (lado ** 2 * (3 ** 0.5)) / 4
+        if num_lados == 3:  # triángulo equilátero
+            area = (lado ** 2 * math.sqrt(3)) / 4
             return round(area, 2)
         else:
             perimetro = num_lados * lado
             area = (perimetro * apotema) / 2
             return round(area, 2)
 
-    
     def perimetro_poligono_regular(self, num_lados, lado):
         return num_lados * lado
         
